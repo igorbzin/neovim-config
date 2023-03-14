@@ -38,9 +38,9 @@ return packer.startup(function(use)
 
   use("szw/vim-maximizer") -- maximizes and restores current window
 
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use({ "rose-pine/neovim", as = "rose-pine" })
 
-  vim.cmd('colorscheme rose-pine')
+  vim.cmd("colorscheme rose-pine")
 
   use("theprimeagen/harpoon")
   use("theprimeagen/refactoring.nvim")
@@ -55,7 +55,7 @@ return packer.startup(function(use)
 
   -- file explorer
   use("nvim-tree/nvim-tree.lua")
-  use("nvim-treesitter/nvim-treesitter-context");
+  use("nvim-treesitter/nvim-treesitter-context")
 
   -- vs-code like icons
   use("nvim-tree/nvim-web-devicons")
@@ -72,17 +72,9 @@ return packer.startup(function(use)
   use("hrsh7th/cmp-buffer") -- source for text in buffer
   use("hrsh7th/cmp-path") -- source for file system paths
 
-
   -- configuring lsp servers
   use("neovim/nvim-lspconfig") -- easily configure language servers
   use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-  -- use({
-  --   "glepnir/lspsaga.nvim",
-  --   branch = "main",
-  --   requires = {
-  --     { "nvim-tree/nvim-web-devicons" },
-  --     { "nvim-treesitter/nvim-treesitter" },
-  --   },
   -- }) -- enhanced lsp uis
   use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
@@ -91,31 +83,30 @@ return packer.startup(function(use)
   use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
   use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
-
   use("folke/zen-mode.nvim")
 
-  use {
-	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v1.x',
-	  requires = {
-		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},
-		  {'williamboman/mason.nvim'},
-		  {'williamboman/mason-lspconfig.nvim'},
+  use({
+    "VonHeikemen/lsp-zero.nvim",
+    branch = "v1.x",
+    requires = {
+      -- LSP Support
+      { "neovim/nvim-lspconfig" },
+      { "williamboman/mason.nvim" },
+      { "williamboman/mason-lspconfig.nvim" },
 
-		  -- Autocompletion
-		  {'hrsh7th/nvim-cmp'},
-		  {'hrsh7th/cmp-buffer'},
-		  {'hrsh7th/cmp-path'},
-		  {'saadparwaiz1/cmp_luasnip'},
-		  {'hrsh7th/cmp-nvim-lsp'},
-		  {'hrsh7th/cmp-nvim-lua'},
+      -- Autocompletion
+      { "hrsh7th/nvim-cmp" },
+      { "hrsh7th/cmp-buffer" },
+      { "hrsh7th/cmp-path" },
+      { "saadparwaiz1/cmp_luasnip" },
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "hrsh7th/cmp-nvim-lua" },
 
-		  -- Snippets
-		  {'L3MON4D3/LuaSnip'},
-		  {'rafamadriz/friendly-snippets'},
-	  }
-  }
+      -- Snippets
+      { "L3MON4D3/LuaSnip" },
+      { "rafamadriz/friendly-snippets" },
+    },
+  })
 
   -- treesitter configuration
   use({
